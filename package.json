@@ -1,0 +1,69 @@
+{
+    "name": "react-magic-input",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/types/index.d.ts",
+    "scripts": {
+        "build": "rollup -c",
+        "prepare": "npm run build",
+        "watch": "rollup -c -w",
+        "dev": "npm run watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SaiKiranMatta/react-magic-input.git"
+    },
+    "keywords": [
+        "react",
+        "input",
+        "form",
+        "components",
+        "validation",
+        "tailwindcss",
+        "ui",
+        "custom-inputs",
+        "form-validation",
+        "file-upload",
+        "input-fields",
+        "react-library",
+        "select-input",
+        "animated-inputs",
+        "react-magic-input"
+    ],
+    "author": "Sai Kiran Matta",
+    "license": "MIT",
+    "description": "React Magic Input - A collection of customizable and animated input components, including text, file, and select fields, built with Tailwind CSS. Easily handle validations, styles, and utilities for building modern forms.",
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^28.0.0",
+        "@rollup/plugin-image": "^3.0.3",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^15.3.0",
+        "@rollup/plugin-typescript": "^12.1.0",
+        "@rollup/plugin-url": "^8.0.2",
+        "@types/react": "^18.3.9",
+        "@types/react-dom": "^18.3.0",
+        "autoprefixer": "^10.4.20",
+        "cssnano": "^7.0.6",
+        "postcss": "^8.4.47",
+        "postcss-cli": "^11.0.0",
+        "rollup": "^2.79.1",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-dts": "^6.1.1",
+        "rollup-plugin-image": "^1.0.2",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "tailwindcss": "^3.4.13",
+        "typescript": "^5.6.2"
+    },
+    "peerDependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "dependencies": {
+        "clsx": "^2.1.1",
+        "tailwind-merge": "^2.5.2"
+    }
+}
