@@ -51,16 +51,7 @@ const NumberInput: React.FC<NumberInputProps> = ({
         setError(errorMsg);
         onError(name, errorMsg);
         onInputChange?.(name, debouncedValue as number);
-    }, [
-        debouncedValue,
-        integer,
-        min,
-        max,
-        label,
-        name,
-        onError,
-        onInputChange,
-    ]);
+    }, [debouncedValue, integer, min, max, label, name, onInputChange]);
 
     useEffect(() => {
         if (isSubmitted) {

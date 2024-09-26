@@ -43,7 +43,7 @@ const EmailInput: React.FC<EmailInputProps> = ({
         setError(errorMsg);
         onError(name, errorMsg);
         onInputChange?.(name, debouncedValue);
-    }, [debouncedValue, label, name, onError, onInputChange]);
+    }, [debouncedValue, label, name, onInputChange]);
 
     useEffect(() => {
         if (isSubmitted) {

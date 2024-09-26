@@ -38,6 +38,7 @@ const Form: React.FC<FormProps> = ({
 
         if (filteredErrors.length > 0) {
             console.log("Cannot submit, errors present:", errors);
+            setIsSubmitted(false);
             return;
         }
 
@@ -58,9 +59,11 @@ const Form: React.FC<FormProps> = ({
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
             console.log("New errors found:", newErrors);
+            setIsSubmitted(false);
             return;
         }
 
+        setIsSubmitted(false);
         // If no errors, proceed with form submission
         onSubmit(formData);
     };

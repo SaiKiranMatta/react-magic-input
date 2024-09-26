@@ -78,7 +78,6 @@ const TextInput: React.FC<TextInputProps> = ({
         allowNumbers,
         label,
         name,
-        onError,
         onInputChange,
     ]);
 

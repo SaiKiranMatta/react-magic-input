@@ -50,7 +50,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
         setError(errorMsg);
         onError(name, errorMsg);
         onInputChange?.(name, debouncedValue);
-    }, [debouncedValue, minLength, label, name, onError, onInputChange]);
+    }, [debouncedValue, minLength, label, name, onInputChange]);
 
     useEffect(() => {
         if (isSubmitted) {
@@ -58,7 +58,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
                 const requiredError = `${label} is required.`;
                 setError(requiredError);
                 onError(name, requiredError);
-            } else if (value.length < minLength) {
+            } else if (required && value.length < minLength) {
                 const minLengthError = `${label} must be at least ${minLength} characters long.`;
                 setError(minLengthError);
                 onError(name, minLengthError);

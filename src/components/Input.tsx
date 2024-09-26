@@ -45,7 +45,7 @@ const Input: React.FC<InputProps> = ({
         setError(errorMsg);
         onError(name, errorMsg);
         onInputChange?.(name, debouncedValue);
-    }, [debouncedValue, pattern, label, name, onError, onInputChange]);
+    }, [debouncedValue, pattern, label, name, onInputChange]);
 
     useEffect(() => {
         if (isSubmitted) {
