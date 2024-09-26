@@ -29,6 +29,12 @@ You can install `react-magic-input` via npm:
 npm install react-magic-input
 ```
 
+Then import the styles in the index.tsx or App.tsx file:
+
+```bash
+import "react-magic-input/dist/index.css";
+```
+
 ## **Usage**
 
 Here’s an example of how to use the components in a form:

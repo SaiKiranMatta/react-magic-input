@@ -1,4 +1,4 @@
-import "./styles/index.css";
+import "./index.css";
 
 export { default as Button } from "./components/Button";
 export { default as CheckBoxGroup } from "./components/CheckBoxGroup";

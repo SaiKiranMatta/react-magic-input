@@ -8,17 +8,19 @@ import url from "@rollup/plugin-url";
 import dts from "rollup-plugin-dts";
 import { image } from "@rollup/plugin-image";
 
+const packageJson = require("./package.json");
+
 export default [
     {
         input: "src/index.ts",
         output: [
             {
-                file: "dist/index.js",
+                file: packageJson.main,
                 format: "cjs",
                 sourcemap: true,
             },
             {
-                file: "dist/index.esm.js",
+                file: packageJson.main,
                 format: "esm",
                 sourcemap: true,
             },
@@ -28,12 +30,12 @@ export default [
             resolve(),
             commonjs(),
             typescript({
-                useTsconfigDeclarationDir: true,
+                tsconfig: "./tsconfig.json",
             }),
             postcss({
-                extract: true,
+                plugins: [require("tailwindcss"), require("autoprefixer")],
+                inject: true,
                 minimize: true,
-                sourceMap: true,
             }),
             url({
                 include: ["**/*.svg", "**/*.png", "**/*.jpg", "**/*.gif"],
@@ -45,9 +47,12 @@ export default [
         external: ["react", "react-dom", "clsx", "tailwind-merge"],
     },
     {
-        input: "dist/types/index.d.ts",
-        output: [{ file: "dist/index.d.ts", format: "esm" }],
+        input: "src/index.ts",
+
+        output: [{ file: packageJson.types }],
+
         plugins: [dts()],
+
         external: [/\.css/],
     },
 ];
