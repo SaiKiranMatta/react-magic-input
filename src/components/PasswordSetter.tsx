@@ -253,9 +253,15 @@ const PasswordSetter: React.FC<PasswordSetterProps> = ({
                 >
                     <img
                         src={
-                            showPassword ? hidePasswordImage : showPasswordImage
+                            showConfirmPassword
+                                ? hidePasswordImage
+                                : showPasswordImage
                         }
-                        alt={showPassword ? "Hide Password" : "Show Password"}
+                        alt={
+                            showConfirmPassword
+                                ? "Hide Password"
+                                : "Show Password"
+                        }
                         width={20}
                         height={20}
                     />
