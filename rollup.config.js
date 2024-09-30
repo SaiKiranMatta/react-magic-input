@@ -35,6 +35,7 @@ export default [
             postcss({
                 plugins: [require("tailwindcss"), require("autoprefixer")],
                 inject: true,
+                extract: true,
                 minimize: true,
             }),
             url({

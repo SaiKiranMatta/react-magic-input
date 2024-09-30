@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useDebounce } from "../hooks/useDebounce";
 import { cn } from "../utils/tw-merge";
 import hidePasswordImage from "../assets/hide-password.svg";
+import hidePasswordImage2 from "../assets/hide-password.svg";
 import showPasswordImage from "../assets/show-password.svg";
+import showPasswordImage2 from "../assets/show-password.svg";
 
 export interface PasswordSetterProps {
     label: string;
@@ -53,7 +55,7 @@ const PasswordSetter: React.FC<PasswordSetterProps> = ({
     };
 
     const toggleConfirmPasswordVisibility = () => {
-        setShowConfirmPassword(!showConfirmPassword);
+        setShowConfirmPassword((prev) => !prev);
     };
 
     const handleShowConditions = () => {
@@ -254,8 +256,8 @@ const PasswordSetter: React.FC<PasswordSetterProps> = ({
                     <img
                         src={
                             showConfirmPassword
-                                ? hidePasswordImage
-                                : showPasswordImage
+                                ? hidePasswordImage2
+                                : showPasswordImage2
                         }
                         alt={
                             showConfirmPassword
