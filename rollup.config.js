@@ -1,12 +1,13 @@
-import typescript from "rollup-plugin-typescript2";
-import postcss from "rollup-plugin-postcss";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import { terser } from "rollup-plugin-terser";
-import url from "@rollup/plugin-url";
+import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
-import { image } from "@rollup/plugin-image";
+import terser from "@rollup/plugin-terser";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import postcss from "rollup-plugin-postcss";
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
+import url from "@rollup/plugin-url";
 
 const packageJson = require("./package.json");
 
@@ -33,7 +34,7 @@ export default [
                 tsconfig: "./tsconfig.json",
             }),
             postcss({
-                plugins: [require("tailwindcss"), require("autoprefixer")],
+                plugins: [tailwindcss(), autoprefixer()],
                 inject: true,
                 extract: true,
                 minimize: true,

@@ -56,11 +56,12 @@ import {
     FileInput,
     Button,
 } from "react-magic-input";
+import "react-magic-input/dist/index.css";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const App = () => {
-    const handleSubmit = (data) => {
+    const handleSubmit = (data: Record<string, any>) => {
         console.log("Form submitted:", data);
     };
 
