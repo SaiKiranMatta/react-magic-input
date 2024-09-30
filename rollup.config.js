@@ -43,7 +43,6 @@ export default [
                 include: ["**/*.svg", "**/*.png", "**/*.jpg", "**/*.gif"],
                 limit: 8192,
             }),
-            // image(),
             terser(),
         ],
         external: ["react", "react-dom", "clsx", "tailwind-merge"],
